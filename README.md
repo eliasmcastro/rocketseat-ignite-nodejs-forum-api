@@ -31,7 +31,10 @@ git clone https://github.com/eliasmcastro/rocketseat-ignite-nodejs-forum-api.git
 ### Requisitos
 
 - [Node.js](https://nodejs.org) na versão 24.18.1 com `npm` na versão 11.16.0
+  - [Como instalar o Node.js](https://github.com/eliasmcastro/guia-instalacao-ferramentas#nodejs--nmv)
+
 - [Docker](https://www.docker.com/get-started) para o banco de dados
+  - [Como instalar o Docker](https://github.com/eliasmcastro/guia-instalacao-ferramentas#docker-e-docker-compose)
 
 #### Opcional
 
@@ -161,12 +164,14 @@ A seguir, a lista de rotas disponíveis na API:
 
 ### Criando um projeto
 
+Antes de começar a desenvolver uma aplicação com NestJS, é necessário instalar a ferramenta de linha de comando (CLI), que simplifica a criação e o gerenciamento de projetos. Após a instalação, é possível gerar um novo projeto com uma estrutura inicial pronta para uso, contendo as configurações e dependências básicas.
+
 - `npm i -g @nestjs/cli` instala a interface de linha de comando (CLI) do NestJS globalmente no seu computador
 - `nest new project-name` cria um novo projeto NestJS
 
 ### Configurando ESLint e Prettier
 
-O ESLint ajuda a manter um padrão de código no projeto, identificar possíveis problemas e aplicar correções automáticas
+O ESLint ajuda a manter um padrão de código no projeto, identificar possíveis problemas e aplicar correções automáticas.
 
 - `npm i eslint@8.57.1 @rocketseat/eslint-config -D` instala as dependências necessárias
 - Crie o arquivo `.eslintrc.json` na raiz do projeto com o seguinte conteúdo
@@ -209,3 +214,10 @@ O ESLint ajuda a manter um padrão de código no projeto, identificar possíveis
     ```
 
 - Para verificar ou corrigir todo o projeto manualmente, execute `npm run lint`
+
+### Docker Compose
+
+O Docker Compose é uma ferramenta que permite definir, configurar e executar aplicações compostas por múltiplos contêineres Docker utilizando um único arquivo de configuração.
+
+- Criei um arquivo chamado `docker-compose.yml` para definir as configurações da aplicação e dos serviços que serão executados pelos contêineres.
+- `docker-compose up -d` inicia o banco de dados com Docker
