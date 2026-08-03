@@ -106,7 +106,7 @@ git clone https://github.com/eliasmcastro/rocketseat-ignite-nodejs-forum-api.git
 - **Linting:** [ESLint](https://eslint.org/)
 - **Validação:** [Zod](https://zod.dev/)
 
-###  Arquitetura
+### Arquitetura
 
 O projeto segue os princípios da **Clean Architecture**, separando o código em quatro camadas principais:
 
@@ -163,3 +163,49 @@ A seguir, a lista de rotas disponíveis na API:
 
 - `npm i -g @nestjs/cli` instala a interface de linha de comando (CLI) do NestJS globalmente no seu computador
 - `nest new project-name` cria um novo projeto NestJS
+
+### Configurando ESLint e Prettier
+
+O ESLint ajuda a manter um padrão de código no projeto, identificar possíveis problemas e aplicar correções automáticas
+
+- `npm i eslint@8.57.1 @rocketseat/eslint-config -D` instala as dependências necessárias
+- Crie o arquivo `.eslintrc.json` na raiz do projeto com o seguinte conteúdo
+
+  ```json
+  {
+    "extends": ["@rocketseat/eslint-config/node"],
+    "rules": {
+      "no-useless-constructor": "off"
+    }
+  }
+  ```
+
+- Crie o arquivo `.editorconfig` na raiz do projeto para defir padrões de formatação para o editor
+
+  ```ini
+  root = true
+
+  [*]
+  indent_style = space
+  indent_size = 2
+  charset = utf-8
+  trim_trailing_whitespace = true
+  insert_final_newline = true
+  end_of_line = lf
+  ```
+
+- Instale a extensão `ESLint` no VS Code
+- Abra as configurações do VS Code em formato JSON:
+  - Pressione `CTRL + SHIFT + P`
+  - Pesquise por `Open User Settings (JSON)`
+  - Adicione as seguintes configurações
+
+    ```json
+    {
+      "editor.formatOnSave": true, // Formata o arquivo automaticamente ao salvar
+      "editor.defaultFormatter": "esbenp.prettier-vscode", // Define o Prettier como formatador padrão
+      "editor.codeActionsOnSave": { "source.fixAll.eslint": "explicit" } // Executa automaticamente as correções sugeridas pelo ESLint ao salvar o arquivo
+    }
+    ```
+
+- Para verificar ou corrigir todo o projeto manualmente, execute `npm run lint`
