@@ -56,11 +56,19 @@ git clone https://github.com/eliasmcastro/rocketseat-ignite-nodejs-forum-api.git
   docker-compose up -d
   ```
 
-- Execute as migrações do Prisma
+- Executar as migrations do Prisma
 
   ```bash
-  npm prisma migrate dev
+  npx prisma migrate dev
   ```
+
+- Acessar o Prisma Studio
+
+  ```bash
+  npx prisma studio
+  ```
+
+  URL para acessar o Prisma Studio: http://localhost:51212
 
 - Executar a aplicação (modo de desenvolvimento)
 
@@ -70,9 +78,7 @@ git clone https://github.com/eliasmcastro/rocketseat-ignite-nodejs-forum-api.git
 
   A aplicação começará a ser executada em http://localhost:3333
 
-  _Dica: utilizar o Insomnia para testar as rotas_
-
-  - Abrir o Insomnia -> Application -> Preferences -> Data -> Import Data -> From File -> Selecionar o arquivo insomnia.json
+  _Dica: utilizar o Insomnia para testar as rotas_: Abrir o Insomnia -> Application -> Preferences -> Data -> Import Data -> From File -> Selecionar o arquivo insomnia.json
 
 - Executar a aplicação (modo de produção)
 
@@ -221,3 +227,16 @@ O Docker Compose é uma ferramenta que permite definir, configurar e executar ap
 
 - Criei um arquivo chamado `docker-compose.yml` para definir as configurações da aplicação e dos serviços que serão executados pelos contêineres.
 - `docker-compose up -d` inicia o banco de dados com Docker
+
+### Prisma
+
+O Prisma é um ORM (Object-Relational Mapping) para Node.js e TypeScript que facilita o acesso e a manipulação de bancos de dados usando código, sem precisar escrever muito SQL.
+
+Sugestão: instale a extensão Prisma no Visual Studio Code para facilitar a edição do arquivo `schema.prisma`, com autocompletar, formatação e validação.
+
+- `npm i prisma@7.2.0 -D` instala o Prisma CLI, usada para criar migrations, gerar o cliente e gerenciar o banco
+- `npm i @prisma/client@7.2.0` instala o cliente prisma utilizado pela aplicação para acessar o banco de dados
+- `npx prisma init` inicializa o Prisma no projeto, criando a pasta `prisma`, o arquivo `schema.prisma` (onde são definidos os modelos, o provedor do banco de dados e a configuração do Prisma) e o arquivo `prisma.config.ts`, responsável pela configuração do Prisma CLI. Também cria ou atualiza o arquivo `.env` com a variável `DATABASE_URL`, caso ele ainda não exista.
+- `npx prisma migrate dev` cria uma nova migration com base nas alterações feitas no arquivo `schema.prisma`, aplica essa migration ao banco de dados e atualiza o Prisma Client automaticamente
+- `npx prisma studio` abre o Prisma Studio, uma interface gráfica para visualizar e gerenciar os dados do banco de dados
+  - URL para acessar o Prisma Studio: http://localhost:51212
