@@ -287,3 +287,27 @@ Sugestão: instale a extensão Prisma no Visual Studio Code para facilitar a edi
 
 - `npx prisma studio` abre o Prisma Studio, uma interface gráfica para visualizar e gerenciar os dados do banco de dados.
   - URL para acessar o Prisma Studio: http://localhost:51212
+
+### Debugando a aplicação pelo VS Code
+
+- Inicie a aplicação em modo de debug: `npm run start:debug`.
+- No VS Code, abra a aba `Run and Debug`. Em seguida, clique em `create a launch.json file` e, quando solicitado, selecione `Node.js`.
+- Substitua o conteúdo gerado pela configuração abaixo:
+
+  ```json
+  {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "node",
+        "request": "attach",
+        "name": "NestJS Debug",
+        "port": 9229,
+        "restart": true,
+        "skipFiles": ["<node_internals>/**"]
+      }
+    ]
+  }
+  ```
+- Abra a aba `Run and Debug`, selecione a configuração `NestJS Debug` e clique em `Start Debugging` (ou pressione F5).
+- Adicione breakpoints nos pontos do código onde deseja realizar o debug.
