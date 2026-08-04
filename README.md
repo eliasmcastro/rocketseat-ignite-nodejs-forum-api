@@ -176,15 +176,15 @@ A seguir, a lista de rotas disponíveis na API:
 
 Antes de começar a desenvolver uma aplicação com NestJS, é necessário instalar a ferramenta de linha de comando (CLI), que simplifica a criação e o gerenciamento de projetos. Após a instalação, é possível gerar um novo projeto com uma estrutura inicial pronta para uso, contendo as configurações e dependências básicas.
 
-- `npm i -g @nestjs/cli` instala a interface de linha de comando (CLI) do NestJS globalmente no seu computador
-- `nest new project-name` cria um novo projeto NestJS
+- `npm i -g @nestjs/cli` instala a interface de linha de comando (CLI) do NestJS globalmente no seu computador.
+- `nest new project-name` cria um novo projeto NestJS.
 
 ### Configurando ESLint e Prettier
 
 O ESLint ajuda a manter um padrão de código no projeto, identificar possíveis problemas e aplicar correções automáticas.
 
-- `npm i eslint@8.57.1 @rocketseat/eslint-config -D` instala as dependências necessárias
-- Criar o arquivo `.eslintrc.json` na raiz do projeto com o seguinte conteúdo
+- `npm i eslint@8.57.1 @rocketseat/eslint-config -D` instala as dependências necessárias.
+- Criar o arquivo `.eslintrc.json` na raiz do projeto com o seguinte conteúdo:
 
   ```json
   {
@@ -195,7 +195,7 @@ O ESLint ajuda a manter um padrão de código no projeto, identificar possíveis
   }
   ```
 
-- Criar o arquivo `.editorconfig` na raiz do projeto para defir padrões de formatação para o editor
+- Criar o arquivo `.editorconfig` na raiz do projeto para defir padrões de formatação para o editor.
 
   ```ini
   root = true
@@ -209,11 +209,11 @@ O ESLint ajuda a manter um padrão de código no projeto, identificar possíveis
   end_of_line = lf
   ```
 
-- Instale a extensão `ESLint` no VS Code
+- Instale a extensão `ESLint` no VS Code.
 - Abra as configurações do VS Code em formato JSON:
-  - Pressione `CTRL + SHIFT + P`
-  - Pesquise por `Open User Settings (JSON)`
-  - Adicione as seguintes configurações
+  - Pressione `CTRL + SHIFT + P`.
+  - Pesquise por `Open User Settings (JSON)`.
+  - Adicione as seguintes configurações:
 
     ```json
     {
@@ -223,14 +223,14 @@ O ESLint ajuda a manter um padrão de código no projeto, identificar possíveis
     }
     ```
 
-- Para verificar ou corrigir todo o projeto manualmente, execute `npm run lint`
+- Para verificar ou corrigir todo o projeto manualmente, execute `npm run lint`.
 
 ### Docker Compose
 
 O Docker Compose é uma ferramenta que permite definir, configurar e executar aplicações compostas por múltiplos contêineres Docker utilizando um único arquivo de configuração.
 
 - Criar um arquivo chamado `docker-compose.yml` para definir as configurações da aplicação e dos serviços que serão executados pelos contêineres.
-- `docker-compose up -d` inicia o banco de dados com Docker
+- `docker-compose up -d` inicia o banco de dados com Docker.
 
 ### Prisma
 
@@ -238,19 +238,19 @@ O Prisma é um ORM (Object-Relational Mapping) para Node.js e TypeScript que fac
 
 Sugestão: instale a extensão Prisma no Visual Studio Code para facilitar a edição do arquivo `schema.prisma`, com autocompletar, formatação e validação.
 
-- `npm i prisma@7.2.0 -D` instala o Prisma CLI, usada para criar migrations, gerar o cliente e gerenciar o banco
+- `npm i prisma@7.2.0 -D` instala o Prisma CLI, usada para criar migrations, gerar o cliente e gerenciar o banco.
 
-- `npm i @prisma/client@7.2.0` instala o cliente prisma utilizado pela aplicação para acessar o banco de dados
+- `npm i @prisma/client@7.2.0` instala o cliente prisma utilizado pela aplicação para acessar o banco de dados.
 
-- `npm i @prisma/adapter-pg@^7.2.0` instala o adaptador oficial do Prisma para PostgreSQL, responsável por conectar o Prisma Client ao banco de dados utilizando o driver pg
+- `npm i @prisma/adapter-pg@^7.2.0` instala o adaptador oficial do Prisma para PostgreSQL, responsável por conectar o Prisma Client ao banco de dados utilizando o driver pg.
 
-- `npm i pg@^8.16.3` instala o driver oficial do PostgreSQL para Node.js, que realiza a comunicação entre a aplicação e o banco de dados
+- `npm i pg@^8.16.3` instala o driver oficial do PostgreSQL para Node.js, que realiza a comunicação entre a aplicação e o banco de dados.
 
-- `npx prisma init` inicializa o Prisma no projeto, criando a pasta `prisma`, o arquivo `schema.prisma` (onde são definidos os modelos, o provedor do banco de dados e a configuração do Prisma) e o arquivo `prisma.config.ts`, responsável pela configuração do Prisma CLI. Também cria ou atualiza o arquivo `.env` com a variável `DATABASE_URL`, caso ele ainda não exista
+- `npx prisma init` inicializa o Prisma no projeto, criando a pasta `prisma`, o arquivo `schema.prisma` (onde são definidos os modelos, o provedor do banco de dados e a configuração do Prisma) e o arquivo `prisma.config.ts`, responsável pela configuração do Prisma CLI. Também cria ou atualiza o arquivo `.env` com a variável `DATABASE_URL`, caso ele ainda não exista.
 
-- `npx prisma migrate dev` cria uma nova migration com base nas alterações feitas no arquivo `schema.prisma`, aplica essa migration ao banco de dados e atualiza o Prisma Client automaticamente
+- `npx prisma migrate dev` cria uma nova migration com base nas alterações feitas no arquivo `schema.prisma`, aplica essa migration ao banco de dados e atualiza o Prisma Client automaticamente.
 
-- `npx prisma generate` gera ou atualiza o Prisma Client com base no arquivo `schema.prisma`, refletindo todas as alterações feitas nos modelos
+- `npx prisma generate` gera ou atualiza o Prisma Client com base no arquivo `schema.prisma`, refletindo todas as alterações feitas nos modelos.
 
-- `npx prisma studio` abre o Prisma Studio, uma interface gráfica para visualizar e gerenciar os dados do banco de dados
+- `npx prisma studio` abre o Prisma Studio, uma interface gráfica para visualizar e gerenciar os dados do banco de dados.
   - URL para acessar o Prisma Studio: http://localhost:51212

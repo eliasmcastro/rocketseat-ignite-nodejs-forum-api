@@ -1,25 +1,24 @@
 {
   "compilerOptions": {
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
-    "resolvePackageJsonExports": true,
-    "esModuleInterop": true,
-    "isolatedModules": true,
-    "declaration": true,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "target": "ES2023",
-    "sourceMap": true,
-    "outDir": "./dist",
-    "baseUrl": "./",
-    "incremental": true,
-    "skipLibCheck": true,
-    "strictNullChecks": true,
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false,
-    "strictBindCallApply": false,
-    "noFallthroughCasesInSwitch": false
+    "module": "nodenext", // Gera módulos seguindo o comportamento atual do Node.js (ESM ou CommonJS)
+    "moduleResolution": "nodenext", // Faz o TypeScript resolver imports da mesma forma que o Node.js moderno
+    "target": "ES2023", // Define a versão de JavaScript gerada
+    "allowSyntheticDefaultImports": true, // Permite import x from "..." mesmo quando o módulo não possui export default
+    "esModuleInterop": true, // Facilita importar módulos CommonJS usando sintaxe ES Modules
+    "resolvePackageJsonExports": true, // Faz o TypeScript respeitar o campo "exports" dos pacotes
+    "emitDecoratorMetadata": true, // Emite metadados usados pela injeção de dependência do NestJS
+    "experimentalDecorators": true, // Habilita decorators (@Injectable(), @Controller(), etc.)
+    "noFallthroughCasesInSwitch": false, // Permite que um case do switch continue para o próximo sem break
+    "declaration": true, // Gera arquivos .d.ts com as definições de tipos
+    "removeComments": true, // Remove comentários do JavaScript gerado
+    "sourceMap": true, // Gera mapas para facilitar o debug
+    "incremental": true, // Salva informações da compilação para builds futuros serem mais rápidos
+    "skipLibCheck": true, // Não verifica tipos dentro de node_modules
+    "baseUrl": "./", // Define uma base para resolução de módulos sem caminho relativo
+    "outDir": "./dist", // Pasta onde os arquivos compilados serão gerados
+    "ignoreDeprecations": "6.0", // Oculta avisos de deprecação do TS 6
+    "forceConsistentCasingInFileNames": true, // Evita problemas de diferença entre maiúsculas/minúsculas nos nomes de arquivos
+    "isolatedModules": true, // Garante que cada arquivo possa ser compilado isoladamente
+    "strict": true, // Obriga o código a ser bem tipado
   }
 }
