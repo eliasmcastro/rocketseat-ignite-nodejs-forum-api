@@ -225,12 +225,45 @@ O ESLint ajuda a manter um padrão de código no projeto, identificar possíveis
 
 - Para verificar ou corrigir todo o projeto manualmente, execute `npm run lint`.
 
-### Docker Compose
+### Docker e Docker Compose
 
-O Docker Compose é uma ferramenta que permite definir, configurar e executar aplicações compostas por múltiplos contêineres Docker utilizando um único arquivo de configuração.
+O Docker é uma plataforma que permite criar e executar aplicações em contêineres, garantindo um ambiente isolado e consistente. O Docker Compose é uma ferramenta que permite definir e gerenciar múltiplos contêineres Docker por meio de um único arquivo de configuração.
 
 - Criar um arquivo chamado `docker-compose.yml` para definir as configurações da aplicação e dos serviços que serão executados pelos contêineres.
-- `docker-compose up -d` inicia o banco de dados com Docker.
+- `docker-compose up -d` para criar e iniciar os containers definidos no `docker-compose.yml`, liberando o terminal.
+
+Principais comandos:
+
+  - `docker ps` para visualizar apenas os containers em execução.
+
+  - `docker ps -a` para visualizar todos os containers (em execução e parados).
+
+  - `docker exec -it ${nomeContainer} /bin/bash` para acessar um container.
+    - CTRL + D para sair
+
+  - `docker logs -f ${nomeContainer}` para acompanhar os logs de um container.
+
+  - `docker start ${nomeContainer}` para iniciar um container.
+
+  - `docker stop ${nomeContainer}` para parar um container.
+
+  - `docker rm ${nomeContainer}` para remover um container.
+
+  - `docker images` para listar as imagens.
+
+  - `docker rmi ${nomeImagen}` para remover uma imagem.
+
+  - `docker-compose up -d` para criar e iniciar os containers definidos no `docker-compose.yml`, liberando o terminal.
+
+  - `docker-compose up --force-recreate -d` para recriar os containers e iniciá-los, liberando o terminal.
+
+  - `docker-compose start` para iniciar os containers existentes.
+
+  - `docker-compose stop` para parar os containers.
+
+  - `docker-compose down` para remover os containers e a rede criada pelo Compose.
+
+  - `docker-compose down -v --rmi local` para remover os containers, a rede, os volumes e as imagens criadas pelo Compose.
 
 ### Prisma
 
