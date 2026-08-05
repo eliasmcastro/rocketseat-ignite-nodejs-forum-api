@@ -323,3 +323,9 @@ O **bcryptjs** é uma biblioteca usada para criptografar senhas antes de armazen
 O **Zod** é uma biblioteca que permite definir esquemas e validar dados (strings, números, objetos, arrays, etc.). Já o **zod-validation-error** converte os erros detalhados do Zod em mensagens mais simples e legíveis.
 
 - `npm i zod zod-validation-error` instala o zod e zod-validation-error
+
+### Usando ConfigModule no Nest.js
+
+O **@nestjs/config** permite acessar e gerenciar as variáveis de ambiente da aplicação.
+
+- `npm i @nestjs/config` instala o módulo @nestjs/config**
