@@ -328,4 +328,32 @@ O **Zod** é uma biblioteca que permite definir esquemas e validar dados (string
 
 O **@nestjs/config** permite acessar e gerenciar as variáveis de ambiente da aplicação.
 
-- `npm i @nestjs/config` instala o módulo @nestjs/config**
+- `npm i @nestjs/config` instala o módulo @nestjs/config
+
+### Autenticação
+
+O **@nestjs/jwt** é um módulo do NestJS que facilita a criação, assinatura e verificação de tokens JWT (JSON Web Tokens), muito utilizados em autenticação e autorização.
+
+- `npm i @nestjs/jwt` instala o módulo @nestjs/jwt
+
+O **@nestjs/passport** integra o Passport ao NestJS, permitindo implementar estratégias de autenticação, como JWT, login com usuário e senha, Google, GitHub, entre outras.
+
+- `npm i @nestjs/passport` instala o módulo @nestjs/passport
+
+O **RS256** (RSA Signature with SHA-256) é um algoritmo de assinatura digital usado em tokens JWT. Ele utiliza um par de chaves assimétricas: uma **chave privada** para assinar o token (criar) e uma **chave pública** para verificar sua autenticidade (validar).
+
+### Gerando as chaves RSA (RS256)
+
+Para utilizar o algoritmo RS256 na autenticação com JWT, é necessário gerar um par de chaves RSA: uma chave privada e uma chave pública.
+
+No Windows, os comandos foram executados no **Git Bash**:
+
+- `openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:2048` gera uma chave privada RSA de 2048 bits e salva no arquivo `private_key.pem`. Essa chave será utilizada para assinar os tokens JWT utilizando o algoritmo RS256.
+
+- `openssl rsa -pubout -in private_key.pem -out public_key.pem` extrai a chave pública correspondente à chave privada e salva no arquivo `public_key.pem`. Essa chave será utilizada para validar a assinatura dos tokens JWT e verificar sua autenticidade.
+
+- `base64 -w 0 private_key.pem > private_key-base64.txt` converte o conteúdo da chave privada em Base64 e salva o resultado no arquivo `private_key-base64.txt`. O valor gerado deve ser utilizado na variável de ambiente `JWT_PRIVATE_KEY` do arquivo `.env`.
+
+- `base64 -w 0 public_key.pem > public_key-base64.txt` converte o conteúdo da chave pública em Base64 e salva o resultado no arquivo `public_key-base64.txt`. O valor gerado deve ser utilizado na variável de ambiente `JWT_PUBLIC_KEY` do arquivo `.env`.
+
+O Base64 é utilizado para representar dados binários em formato de texto, facilitando o armazenamento em variáveis de ambiente, como no arquivo `.env`.
