@@ -20,5 +20,6 @@
     "forceConsistentCasingInFileNames": true, // Evita problemas de diferença entre maiúsculas/minúsculas nos nomes de arquivos
     "isolatedModules": true, // Garante que cada arquivo possa ser compilado isoladamente
     "strict": true, // Obriga o código a ser bem tipado
+    "strictNullChecks": true, // Faz o compilador tratar null e undefined como tipos distintos
   }
 }

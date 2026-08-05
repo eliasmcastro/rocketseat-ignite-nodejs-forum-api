@@ -174,14 +174,14 @@ A seguir, a lista de rotas disponíveis na API:
 
 ### Criando um projeto
 
-Antes de começar a desenvolver uma aplicação com NestJS, é necessário instalar a ferramenta de linha de comando (CLI), que simplifica a criação e o gerenciamento de projetos. Após a instalação, é possível gerar um novo projeto com uma estrutura inicial pronta para uso, contendo as configurações e dependências básicas.
+Antes de começar a desenvolver uma aplicação com **NestJS**, é necessário instalar a ferramenta de linha de comando (CLI), que simplifica a criação e o gerenciamento de projetos. Após a instalação, é possível gerar um novo projeto com uma estrutura inicial pronta para uso, contendo as configurações e dependências básicas.
 
 - `npm i -g @nestjs/cli` instala a interface de linha de comando (CLI) do NestJS globalmente no seu computador.
 - `nest new project-name` cria um novo projeto NestJS.
 
 ### Configurando ESLint e Prettier
 
-O ESLint ajuda a manter um padrão de código no projeto, identificar possíveis problemas e aplicar correções automáticas.
+O **ESLint** ajuda a manter um padrão de código no projeto, identificar possíveis problemas e aplicar correções automáticas.
 
 - `npm i eslint@8.57.1 @rocketseat/eslint-config -D` instala as dependências necessárias.
 - Criar o arquivo `.eslintrc.json` na raiz do projeto com o seguinte conteúdo:
@@ -227,7 +227,7 @@ O ESLint ajuda a manter um padrão de código no projeto, identificar possíveis
 
 ### Docker e Docker Compose
 
-O Docker é uma plataforma que permite criar e executar aplicações em contêineres, garantindo um ambiente isolado e consistente. O Docker Compose é uma ferramenta que permite definir e gerenciar múltiplos contêineres Docker por meio de um único arquivo de configuração.
+O **Docker** é uma plataforma que permite criar e executar aplicações em contêineres, garantindo um ambiente isolado e consistente. O **Docker Compose** é uma ferramenta que permite definir e gerenciar múltiplos contêineres Docker por meio de um único arquivo de configuração.
 
 - Criar um arquivo chamado `docker-compose.yml` para definir as configurações da aplicação e dos serviços que serão executados pelos contêineres.
 - `docker-compose up -d` para criar e iniciar os containers definidos no `docker-compose.yml`, liberando o terminal.
@@ -267,7 +267,7 @@ Principais comandos:
 
 ### Prisma
 
-O Prisma é um ORM (Object-Relational Mapping) para Node.js e TypeScript que facilita o acesso e a manipulação de bancos de dados usando código, sem precisar escrever muito SQL.
+O **Prisma** é um ORM (Object-Relational Mapping) para Node.js e TypeScript que facilita o acesso e a manipulação de bancos de dados usando código, sem precisar escrever muito SQL.
 
 Sugestão: instale a extensão Prisma no Visual Studio Code para facilitar a edição do arquivo `schema.prisma`, com autocompletar, formatação e validação.
 
@@ -311,3 +311,15 @@ Sugestão: instale a extensão Prisma no Visual Studio Code para facilitar a edi
   ```
 - Abra a aba `Run and Debug`, selecione a configuração `NestJS Debug` e clique em `Start Debugging` (ou pressione F5).
 - Adicione breakpoints nos pontos do código onde deseja realizar o debug.
+
+### Criptografrar senha
+
+O **bcryptjs** é uma biblioteca usada para criptografar senhas antes de armazená-las no banco de dados.
+
+- `npm i bcryptjs` para instalar o bcrypt
+
+### Validação de dados
+
+O **Zod** é uma biblioteca que permite definir esquemas e validar dados (strings, números, objetos, arrays, etc.). Já o **zod-validation-error** converte os erros detalhados do Zod em mensagens mais simples e legíveis.
+
+- `npm i zod zod-validation-error` instala o zod e zod-validation-error
