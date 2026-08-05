@@ -357,3 +357,10 @@ No Windows, os comandos foram executados no **Git Bash**:
 - `base64 -w 0 public_key.pem > public_key-base64.txt` converte o conteúdo da chave pública em Base64 e salva o resultado no arquivo `public_key-base64.txt`. O valor gerado deve ser utilizado na variável de ambiente `JWT_PUBLIC_KEY` do arquivo `.env`.
 
 O Base64 é utilizado para representar dados binários em formato de texto, facilitando o armazenamento em variáveis de ambiente, como no arquivo `.env`.
+
+### Protegendo rotas com Guards
+
+O **Passport JWT**, uma estratégia de autenticação para aplicações Node.js/TypeScript que utilizam JSON Web Tokens (JWT). Veja mais em [passportjs.org](https://www.passportjs.org/).
+
+- `npm i passport-jwt` instala a estratégia Passport para autenticação com JWT
+- `npm i @types/passport-jwt` instala as definições de tipos para usar passport-jwt com TypeScript.
