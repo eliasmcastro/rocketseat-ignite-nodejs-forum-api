@@ -364,3 +364,14 @@ O **Passport JWT**, uma estratégia de autenticação para aplicações Node.js/
 
 - `npm i passport-jwt` instala a estratégia Passport para autenticação com JWT
 - `npm i @types/passport-jwt` instala as definições de tipos para usar passport-jwt com TypeScript.
+
+### Testes com Vitest e SWC
+
+O **Vitest** é um framework de testes para aplicações JavaScript e TypeScript. Ele permite criar e executar testes de forma rápida, sendo utilizado para testes unitários, de integração e end-to-end (E2E).
+
+O **SWC** é um compilador de JavaScript e TypeScript. Ele converte o código TypeScript em JavaScript e oferece suporte a recursos como decorators, utilizados pelo NestJS.
+
+- `npm i vitest vite-tsconfig-paths @vitest/coverage-v8 -D` instala as dependências necessárias para configurar o Vitest, incluindo suporte aos aliases do `tsconfig.json` e geração de relatórios de cobertura de testes
+- `npm i @swc/core unplugin-swc -D` instala as dependências necessárias para utilizar o SWC
+
+- `npm run test:e2e` para executar os testes e2e

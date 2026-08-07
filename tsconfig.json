@@ -2,7 +2,7 @@
   "compilerOptions": {
     "module": "nodenext", // Gera módulos seguindo o comportamento atual do Node.js (ESM ou CommonJS)
     "moduleResolution": "nodenext", // Faz o TypeScript resolver imports da mesma forma que o Node.js moderno
-    "target": "ES2023", // Define a versão de JavaScript gerada
+    "target": "es2023", // Define a versão de JavaScript gerada
     "allowSyntheticDefaultImports": true, // Permite import x from "..." mesmo quando o módulo não possui export default
     "esModuleInterop": true, // Facilita importar módulos CommonJS usando sintaxe ES Modules
     "resolvePackageJsonExports": true, // Faz o TypeScript respeitar o campo "exports" dos pacotes
@@ -21,5 +21,13 @@
     "isolatedModules": true, // Garante que cada arquivo possa ser compilado isoladamente
     "strict": true, // Obriga o código a ser bem tipado
     "strictNullChecks": true, // Faz o compilador tratar null e undefined como tipos distintos
+    "paths": { // Define aliases para simplificar importações dentro do projeto
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "types": [ // Especifica os pacotes de definições de tipos carregados automaticamente pelo compilador
+      "vitest/globals"
+    ]
   }
 }
