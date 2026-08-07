@@ -363,9 +363,9 @@ O Base64 é utilizado para representar dados binários em formato de texto, faci
 O **Passport JWT**, uma estratégia de autenticação para aplicações Node.js/TypeScript que utilizam JSON Web Tokens (JWT). Veja mais em [passportjs.org](https://www.passportjs.org/).
 
 - `npm i passport-jwt` instala a estratégia Passport para autenticação com JWT
-- `npm i @types/passport-jwt` instala as definições de tipos para usar passport-jwt com TypeScript.
+- `npm i @types/passport-jwt` instala as definições de tipos para usar passport-jwt com TypeScript
 
-### Testes com Vitest e SWC
+### Configurando Vitest com SWC para criação de testes
 
 O **Vitest** é um framework de testes para aplicações JavaScript e TypeScript. Ele permite criar e executar testes de forma rápida, sendo utilizado para testes unitários, de integração e end-to-end (E2E).
 
@@ -374,4 +374,13 @@ O **SWC** é um compilador de JavaScript e TypeScript. Ele converte o código Ty
 - `npm i vitest vite-tsconfig-paths @vitest/coverage-v8 -D` instala as dependências necessárias para configurar o Vitest, incluindo suporte aos aliases do `tsconfig.json` e geração de relatórios de cobertura de testes
 - `npm i @swc/core unplugin-swc -D` instala as dependências necessárias para utilizar o SWC
 
+### Testes automatizados
+
+- Testes unitários são testes que validam o comportamento de uma única unidade de código, como uma função ou método. Eles são úteis para garantir que cada parte da aplicação esteja funcionando corretamente, sem depender de outras partes.
+
+- Testes de integração são testes que validam a integração entre várias partes da aplicação, como a integração entre a camada de banco de dados e a camada de serviço. Eles são importantes para garantir que a aplicação esteja funcionando corretamente como um todo.
+
+- Testes e2e (end-to-end) são testes que validam o comportamento da aplicação como um todo, simulando a interação do usuário com a aplicação. Eles são importantes para garantir que a aplicação esteja funcionando corretamente em todos os níveis, desde a camada de interface até a camada de banco de dados.
+
+- `npm i supertest @types/supertest -D` instala o supertest e suas definições de tipo
 - `npm run test:e2e` para executar os testes e2e
